@@ -1,0 +1,269 @@
+/* Default styles for PC */
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensuring padding and border are included in element's total width and height */
+}
+
+/* Styling the body with black background */
+body {
+    background-color: #000000; /* black */
+    color: #ffffff; /* white text */
+    font-family: Arial, sans-serif; /* example font */
+}
+
+/* Centering the logo horizontally */
+.logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Styling the 'OF' text */
+.logo h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Styling the horizontal line */
+header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff; /* white */
+    margin-top: 10px;
+}
+
+/* Styling the content section */
+.content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Container for images */
+.image-wrapper {
+    position: relative; /* Ensure relative positioning for children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Styling for the left image */
+.left-image img {
+    max-width: 120px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: -40px; /* Space between images */
+    position: relative;
+    z-index: -1;
+    filter: blur(1px);
+    transition: transform 0.3s ease; /* Adding transition for smooth transform */
+    border: 2px solid transparent; /* Making border transparent initially */
+    border-right-color: #000000; /* Adding neon border effect on the right side only */
+    box-shadow: 0 0 10px #000000; /* Adding neon box-shadow effect */
+}
+
+/* Styling for the overlay image */
+.overlay-image img {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: -40px;
+    transition: transform 0.3s ease; /* Adding transition for smooth transform */
+    border: 2px solid transparent; /* Making border transparent initially */
+    border-left-color: #00000; /* Adding neon border effect on the left side */
+    border-right-color: #00000; /* Adding neon border effect on the right side */
+    box-shadow: 0 0 10px #0000; /* Adding neon box-shadow effect */
+}
+
+/* Styling for the base image */
+.base-image img {
+    max-width: 180px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    z-index: 2; /* Ensure base image is above */
+    transition: transform 0.3s ease; /* Adding transition for smooth transform */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 2px solid transparent; /* Making border transparent initially */
+    border-left-color: #000000; /* Adding neon border effect on the left side */
+    border-right-color: #000000; /* Adding neon border effect on the right side */
+    box-shadow: 0 0 10px #000000; /* Adding neon box-shadow effect */
+}
+
+/* Styling for the right image */
+.right-image img {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -50px; /* Space between images */
+    position: relative;
+    z-index: 1; /* Ensure right image is under */
+    transition: transform 0.3s ease; /* Adding transition for smooth transform */
+    border: 2px solid transparent; /* Making border transparent initially */
+    border-left-color: #000000; /* Adding neon border effect on the left side */
+    border-right-color: #000000; /* Adding neon border effect on the right side */
+    box-shadow: 0 0 10px #000000; /* Adding neon box-shadow effect */
+}
+
+/* Styling for the rightmost image */
+.rightmost-image img {
+    max-width: 120px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: -40px; /* Space between images */
+    position: relative;
+    z-index: 0; /* Ensure rightmost image is under */
+    filter: blur(1px);
+    transition: transform 0.3s ease; /* Adding transition for smooth transform */
+    border: 2px solid transparent; /* Making border transparent initially */
+    border-left-color: #000000; /* Adding neon border effect on the left side only */
+    box-shadow: 0 0 10px #000000; /* Adding neon box-shadow effect */
+}
+
+/* Apply effect on hover and click */
+.image-wrapper img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.image-wrapper img:active {
+    transform: scale(0.95); /* Scale down when clicked */
+}
+
+.vtuber-info {
+    text-align: center;
+    margin-top: 20px; /* Adjust top margin as needed */
+    font-size: 18px;
+    line-height: 1.6; /* Adjust line height for spacing */
+}
+
+.vtuber-info .name {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.spacer {
+    margin-bottom: 10px; /* Adjust spacing between elements */
+}
+
+.online {
+    font-weight: bold;
+    color: #00FF00; /* Green color for online status */
+}
+
+.promo-link {
+    text-decoration: none; /* Remove underline from link */
+}
+
+.promo-button {
+    background-color: #00AFF0;
+    color: white;
+    border: none;
+    padding: 12px 40px; /* Adjust padding to increase horizontal size */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px; /* Adjust this value to control the roundness */
+    margin-top: 20px;
+}
+
+.promo-button:hover {
+    background-color: #008fc1;
+}
+
+.match-text {
+    color: #1e90ff; /* Dark blue color */
+    font-weight: bold;
+    margin-top: 10px; /* Adjust top margin as needed */
+}
+
+.geolocation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Adjust spacing between geolocation and next paragraph */
+}
+
+.location-icon {
+    font-size: 24px; /* Adjust size of the location icon */
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+.geolocation {
+    display: inline-block; /* Ensure text stays on the same line */
+}
+
+/* Media query for tablets and mobile phones */
+@media (max-width: 1024px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling on tablets */
+    }
+
+    .left-image img {
+        display: none; /* Hide left image on tablets */
+    }
+
+    .rightmost-image img {
+        display: none; /* Hide rightmost image on tablets */
+    }
+
+    .right-image img {
+        max-width: 120px; /* Adjust size for tablets */
+    }
+
+    .vtuber-info {
+        font-size: 16px; /* Adjust font size for tablets */
+    }
+
+    .logo h1 {
+        font-size: 40px; /* Adjust logo size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling on mobile phones */
+    }
+
+    .left-image img {
+        display: none; /* Hide left image on mobile phones */
+    }
+
+    .rightmost-image img {
+        display: none; /* Hide rightmost image on mobile phones */
+    }
+
+    .right-image img {
+        max-width: 140px; /* Adjust size for mobile phones */
+    }
+
+    .vtuber-info {
+        font-size: 14px; /* Adjust font size for mobile phones */
+    }
+
+    .logo h1 {
+        font-size: 32px; /* Adjust logo size for mobile phones */
+    }
+}
+
+/* Media query for very small mobile phones */
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling on very small mobile phones */
+    }
+
+    .overlay-image img,
+    .base-image img,
+    .right-image img {
+        max-width: 100px; /* Adjust size for very small mobile phones */
+    }
+
+    .vtuber-info {
+        font-size: 12px; /* Adjust font size for very small mobile phones */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Adjust logo size for very small mobile phones */
+    }
+
+    .promo-button {
+        padding: 10px 30px; /* Adjust padding for very small mobile phones */
+        font-size: 14px; /* Adjust font size for promo button */
+    }
+}
