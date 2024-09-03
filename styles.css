@@ -1,0 +1,224 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Video background */
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Default scale for mobile and PC */
+@media (max-width: 767px), (min-width: 1025px) {
+    .video-background {
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+}
+
+/* Scale for tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .video-background {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.circle-container {
+    position: absolute;
+    top: 60px; /* Adjusted to move it down */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.circle-image {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px; /* Space between the image and the text */
+    position: relative;
+    left: 125px; /* Move the image to the right (adjust as needed) */
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-text {
+    font-size: 20px; /* Adjust text size as needed */
+    font-family: 'Shrikhand', sans-serif; /* Use the Shrikhand font */
+    color: white; /* Set text color to white */
+    font-weight: 600; /* Reduce boldness */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+.status-container {
+    margin-top: 10px; /* Space between the circle text and status */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: limegreen; /* Green color for the online dot */
+    margin-right: 5px; /* Space between the dot and the text */
+}
+
+.status-text {
+    font-size: 16px; /* Adjust text size as needed */
+    color: white; /* Set text color to white */
+    font-family: Arial, sans-serif; /* Use a standard sans-serif font */
+}
+
+.additional-text {
+    font-size: 16px; /* Adjust text size as needed */
+    color: white; /* Set text color to white */
+    font-family: Arial, sans-serif; /* Use a standard sans-serif font */
+    margin-top: 10px; /* Space between the status and additional text */
+    white-space: nowrap; /* Keep the text in one row */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+/* New styles for geolocation and countdown */
+.unique-info {
+    position: absolute;
+    top: 300px; /* Adjusted to move it further down */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+    font-family: Arial, sans-serif; /* Use a standard sans-serif font */
+}
+
+.unique-geolocation {
+    font-size: 16px; /* Adjust text size as needed */
+    margin-bottom: 10px; /* Space between the location text and countdown timer */
+}
+
+.countdown-timer {
+    font-size: 20px; /* Adjust text size as needed */
+    font-weight: bold;
+}
+
+.call-to-action {
+    font-size: 16px; /* Adjust text size as needed */
+    font-family: Arial, sans-serif; /* Use a standard sans-serif font */
+    color: white; /* Set text color to white */
+    margin-top: 40px; /* Space between the countdown timer and call-to-action text */
+    white-space: nowrap; /* Ensure text stays in one line */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px; /* Space between the call-to-action text and buttons */
+}
+
+.transparent-button {
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    padding: 10px 90px; /* Adjust padding as needed */
+    border: 2px solid white; /* White border */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text color */
+    font-family: Arial, sans-serif; /* Use a standard sans-serif font */
+    font-size: 20px; /* Adjust text size as needed */
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 20px; /* More rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+    position: relative; /* Set relative positioning for button */
+    text-shadow: 0 0 5px pink, 0 0 10px pink, 0 0 15px pink, 0 0 20px pink, 0 0 25px pink, 0 0 30px pink; /* Pink neon effect */
+    box-shadow: 0 0 10px pink; /* Glow effect around the button */
+}
+
+.button-icon {
+    width: 40px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Use absolute positioning */
+    left: 0px; /* Move the icon a bit to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+.button-text {
+    margin-left: 50px; /* Ensure there is space for the icon */
+}
+
+.cta-detail {
+    margin-top: 5px; /* Space between the main text and the detail */
+    display: block; /* Ensure it starts on a new line */
+}
+
+/* Adjust button for mobile devices */
+@media (max-width: 767px) {
+    .transparent-button {
+        padding: 10px 20px; /* Reduce padding */
+        font-size: 16px; /* Reduce font size */
+    }
+    .button-text {
+        margin-left: 60px; /* Increase space between icon and text */
+    }
+    .button-icon {
+        width: 20px; /* Reduce icon size */
+    }
+    .call-to-action {
+        font-size: 14px; /* Reduce font size for mobile */
+    }
+}
+
+/* Load and apply the custom font */
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('fonts/Shrikhand-Regular.ttf') format('truetype');
+}
+
+/* Shake animation for the second button */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply shake animation to the second button */
+.button-container a:nth-of-type(2) {
+    animation: shake 0.8s ease-in-out infinite;
+}
